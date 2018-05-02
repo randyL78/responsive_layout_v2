@@ -28,6 +28,7 @@ footer nav {
   }
 
   .nav--main a {
+    /* divide nav space evenly for nav links */
     width: 25%;
     float: left;
     background-color: inherit;
@@ -38,7 +39,7 @@ footer nav {
   .image--profile {
     float: right;
     width: 40%;
-    margin: 2em;
+    margin: 2em 0 2em 2em;
   }
 
   .text--profile {
@@ -47,12 +48,14 @@ footer nav {
 
   /* main */
   article {
+    /* make the portfolio items a 2 columns layout */
     margin-left: .75em;
     float: left;
     width: 48%;
   }
 
   article:nth-of-type(odd) {
+    /* keep articles of different heights from breaking layout by applying a clearfix for each new row */
     content: "";
     display: table;
     clear: both; 
@@ -81,13 +84,52 @@ footer nav {
 
 /* desktop sized screens */
 @media screen and (min-width: 1024px) { 
-  /* main */
-  article {
-    margin-left: .75em;
-    float: left;
-    width: 31%;
+
+  body {
+    /* keep layout from getting too wide */
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
+  /* header */
+  header h1 {
+    text-align: left;
+    /* make width here + main--nav width total 100% to keep intro paragraph from breaking */
+    width: 60%;
+    float: left;
+    /* adjust margins to make bottom edge line up with bottom edge of main--nav */
+    margin-top: .25em;
+    margin-bottom: 1.325em;
+  }
+
+  .nav--main {
+    float: right;
+    margin-bottom: 2em;
+    /* make nav width smaller to keep links from becoming too spaced out */
+    width: 40%;
+  }
+
+  /* resets floats after nav to ensure profile image and intro paragraph respect their height */
+  .nav--main::after {
+    content: "";
+    display: table;
+    clear: both; 
+  }
+
+  .image--profile {
+    margin-top: 0;
+  }
+
+  /* main */
+  article {
+    /* make the portfolio items a 3 columns layout */ 
+    margin-left: .75em;
+    float: left;
+    width: 32%;
+  }
+
+  /* undo the 2 column layout clearfix */
   article:nth-of-type(odd) {
     display: block;
     clear: none;

@@ -53,6 +53,7 @@ img {
 }
 
 nav a {
+  color: darkslategrey;
   text-transform: uppercase;
   font-weight: 900;
   text-decoration: none;
@@ -66,12 +67,11 @@ nav a:hover {
 
 /* header */
 header {
-  padding-bottom: 2em;
+  padding: 2em;
 }
 
 .nav--main a {
   /* nav button styling */
-  color: darkslategrey;
   display: block;
   margin: .4em auto 0 auto;
   padding: 15px;
@@ -84,6 +84,12 @@ header {
 .image--profile {
   margin: 4em auto 0;
   width: 65%;
+}
+
+.text--profile {
+  font-size: 1.5em;
+  line-height: 1.4em;
+  padding-left: 0;
 }
 
 
