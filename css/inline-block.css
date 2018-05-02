@@ -23,6 +23,12 @@ footer nav {
 @media screen and (min-width: 768px) { 
 
   /* header */
+  header::after {
+    clear: both;
+    display: table;
+    content: "";
+  }
+
   .nav--main {
     /* center the inline buttons for tablet view */
     text-align: center;
@@ -32,6 +38,17 @@ footer nav {
     /* remove mobile styles */
     background-color: inherit;
     display: inline;
+  }
+
+  /* having to use a float (or flexbox) here to reverse the order of the paragraph and the picture */
+  .image--profile {  
+    float: right;
+    width: 40%;
+    margin: 2em 0 2em 2em;
+  }
+  
+  .text--profile {
+    text-align: left;
   }
 
   /* main */
@@ -70,3 +87,6 @@ footer nav {
     display: none;
   }
 }
+
+/* ====================================================================== */
+/* desktop sized screens */
