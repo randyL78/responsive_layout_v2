@@ -1,1 +1,10 @@
 /* styling for tablet and desktop with flexbox */
+
+/* footer base styles */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
