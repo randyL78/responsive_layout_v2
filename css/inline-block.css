@@ -1,2 +1,38 @@
-/* styling for tablet and desktop with floats */
+/* styling for tablet and desktop with inline and inline-blocks */
 
+/* footer base styles */
+footer h2, footer nav {
+  /* put both items on the same line */
+  display: inline-block;
+  width: 49.25%;
+}
+
+footer h2 {
+  /* remove the centering of the headline */
+  text-align: left;
+}
+
+footer nav {
+  /* shift nav to right side */
+  text-align: right;
+}
+
+
+/* ====================================================================== */
+/* tablet sized screens */
+@media screen and (min-width: 768px) { 
+
+  /* header */
+  .nav--main {
+    /* center the inline buttons for tablet view */
+    text-align: center;
+  }
+
+  .nav--main a {
+    /* remove mobile styles */
+    background-color: inherit;
+    display: inline;
+  }
+
+  
+}
