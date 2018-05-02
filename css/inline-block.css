@@ -1,0 +1,122 @@
+/* styling for tablet and desktop with inline and inline-blocks */
+
+/* footer base styles */
+footer h2, footer nav {
+  /* put both items on the same line */
+  display: inline-block;
+  width: 49.25%;
+}
+
+footer h2 {
+  /* remove the centering of the headline */
+  text-align: left;
+}
+
+footer nav {
+  /* shift nav to right side */
+  text-align: right;
+}
+
+
+/* ====================================================================== */
+/* tablet sized screens */
+@media screen and (min-width: 768px) { 
+
+  /* header */
+  header::after {
+    clear: both;
+    display: table;
+    content: "";
+  }
+
+  .nav--main {
+    /* center the inline buttons for tablet view */
+    text-align: center;
+  }
+
+  .nav--main a {
+    /* remove mobile styles */
+    background-color: inherit;
+    display: inline;
+  }
+
+  /* having to use a float (or flexbox) here to reverse the order of the paragraph and the picture */
+  .image--profile {  
+    float: right;
+    width: 40%;
+    margin: 2em 0 2em 2em;
+  }
+
+  .text--profile {
+    text-align: left;
+  }
+
+  /* main */
+  article {
+    /* make the articles a 2 column layout with inline-block and width */
+    display: inline-block;
+    width: 48.5%;
+    /* ensure unequal height articles don't break layout and line up properly */
+    vertical-align: top;
+  }
+
+  article:nth-of-type(even) {
+    padding-left: 1%;
+  }
+
+  article:nth-of-type(odd) {
+    padding-left: 1%;
+  }
+
+  #skills ul {
+    text-align: center;
+  }
+
+  #skills li {
+    display: inline;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+
+  /* footer */
+  footer nav a {
+    display: inline;
+    padding-left: 1.5em;
+  }
+  
+  footer nav a:nth-child(1) {
+    display: none;
+  }
+}
+
+/* ====================================================================== */
+/* desktop sized screens */
+@media screen and (min-width: 1024px) {
+  body {
+    /* keep layout from getting too wide */
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* header */
+  header h1 {
+    display: inline-block;
+    width: 48%;
+    text-align: left;
+  }
+
+  .nav--main {
+    text-align: right;
+    width: 50%;
+    /* margin-left: auto; */
+    display: inline-block;
+  }
+
+  /* main */
+  article {
+    /* make the articles a 2 column layout with width */
+    width: 33%;
+  }
+
+}
