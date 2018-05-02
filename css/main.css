@@ -1,8 +1,13 @@
 /* base styles and majority of mobile layout */
 
-/* base */
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
 
+/* helpers */
+.bold {
+  font-weight: 900;
+}
+
+/* base */
 * {
   font-family: 'Lato', sans-serif;
 }
@@ -13,10 +18,6 @@ body {
 
 h1, h2, h3 {
   text-align: center;
-}
-
-h2 {
-  text-transform: uppercase;
 }
 
 h3 {
@@ -30,6 +31,11 @@ ul {
 
 li {
   text-align: center;
+  font-size: 1.3em;
+}
+
+li + li {
+  margin-top: 1em;
 }
 
 p {
@@ -46,6 +52,18 @@ img {
   display: block;
 }
 
+nav a {
+  text-transform: uppercase;
+  font-weight: 900;
+  text-decoration: none;
+  /* CSS transition to ease effect */
+  transition: color 0.4s ease-in;
+}
+
+nav a:hover {
+  color: darkorchid;
+}
+
 /* header */
 header {
   padding-bottom: 2em;
@@ -58,33 +76,35 @@ header {
   margin: .4em auto 0 auto;
   padding: 15px;
   width: 86%;
-  text-transform: uppercase;
-  font-weight: 900;
-  text-decoration: none;
   background-color: white;
   text-align: center;
   border-radius: 5px;
-  /* CSS transition to ease effect */
-  transition: color 0.4s ease-in;
-}
-
-nav a:hover {
-  color: darkorchid;
 }
 
 .image--profile {
   margin: 4em auto 0;
+  width: 65%;
 }
 
 
 /* main */
-main {
-  border-bottom: 2px solid darkslategray;
+main h2 {
+  text-transform: uppercase;
+}
+
+section {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+section + section {
+  margin-top: 4em;
 }
 
 #portfolio {
   background-color: white;
-  padding: 3em 1.5em;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 
 article {
@@ -96,4 +116,16 @@ article img {
   width: 100%;
 }
 
+#contact ul {
+  padding-bottom: 5em;
+  border-bottom: 2px solid darkgray;
+}
+
 /* footer */
+footer nav a {
+  display: none;
+}
+
+footer nav a:nth-child(1) {
+  display: block;
+}
