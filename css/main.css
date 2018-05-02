@@ -1,8 +1,52 @@
 /* base styles and majority of mobile layout */
 
 /* base */
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+p {
+  color: gray;
+  font-weight: 300;
+  font-size: 1.3em;
+}
+
 
 /* header */
+nav a {
+  /* nav button styling */
+  color: darkslategrey;
+  display: block;
+  margin: 5px auto 0 auto;
+  padding: 15px;
+  width: 90%;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-decoration: none;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  /* CSS transition to ease effect */
+  transition: color 0.4s ease-in;
+}
+
+nav a:hover {
+  color: darkorchid;
+}
 
 /* main */
 
