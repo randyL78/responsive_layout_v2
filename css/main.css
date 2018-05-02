@@ -122,6 +122,10 @@ article img {
 }
 
 /* footer */
+footer {
+  padding: .5em 1.5em;
+}
+
 footer nav a {
   display: none;
 }

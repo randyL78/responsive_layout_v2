@@ -1,0 +1,12 @@
+/* styling for tablet and desktop with floats */
+
+/* footer styles */
+footer h2 {
+  margin-top: 0;
+  float: left;
+}
+
+footer nav { 
+  padding-top: .5em;
+  float: right;
+}
