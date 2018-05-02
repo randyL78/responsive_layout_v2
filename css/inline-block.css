@@ -46,13 +46,14 @@ footer nav {
     width: 40%;
     margin: 2em 0 2em 2em;
   }
-  
+
   .text--profile {
     text-align: left;
   }
 
   /* main */
   article {
+    /* make the articles a 2 column layout with inline-block and width */
     display: inline-block;
     width: 48.5%;
     /* ensure unequal height articles don't break layout and line up properly */
@@ -90,3 +91,32 @@ footer nav {
 
 /* ====================================================================== */
 /* desktop sized screens */
+@media screen and (min-width: 1024px) {
+  body {
+    /* keep layout from getting too wide */
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* header */
+  header h1 {
+    display: inline-block;
+    width: 48%;
+    text-align: left;
+  }
+
+  .nav--main {
+    text-align: right;
+    width: 50%;
+    /* margin-left: auto; */
+    display: inline-block;
+  }
+
+  /* main */
+  article {
+    /* make the articles a 2 column layout with width */
+    width: 33%;
+  }
+
+}
