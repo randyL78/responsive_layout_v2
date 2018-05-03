@@ -8,3 +8,50 @@ footer {
   align-items: center;
 }
 
+/* ====================================================================== */
+/* tablet sized screens */
+@media screen and (min-width: 768px) {
+  /* header */
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  header h1 {
+    flex: 0 1 100%
+
+  }
+
+  .nav--main {
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: center;
+  }
+
+  .nav--main a {
+    /* remove mobile styles */
+    background-color: inherit;
+    flex-basis: 100px;
+    /* undo margins set by main.css */
+    margin: 0;
+  }
+
+  .image--profile {
+    flex-basis: 25%;
+    margin-top: 2em;
+    order: 1;
+    
+  }
+
+  .text--profile {
+    flex-basis: 45%;
+    text-align: left;
+  }
+ }
+
+
+/* ====================================================================== */
+/* desktop sized screens */
+@media screen and (min-width: 1024px) { }
