@@ -15,7 +15,7 @@ footer {
   header {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
   }
 
@@ -40,7 +40,7 @@ footer {
 
   .image--profile {
     flex-basis: 25%;
-    margin-top: 2em;
+    margin: 2em 0;
     order: 1;
     
   }
@@ -49,8 +49,44 @@ footer {
     flex-basis: 45%;
     text-align: left;
   }
- }
 
+  /* main */
+  #portfolio {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  #portfolio h2 {
+    flex-basis: 100%;
+  }
+
+  article {
+    flex-basis: 48%;
+  }
+
+  #skills ul {
+    display: flex;
+    justify-content: center;
+  }
+  #skills li {
+    margin: 0 3%;
+  }
+
+  footer nav {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-between;
+  }
+
+  footer nav a {
+    display: block;
+  }
+
+  footer nav a:nth-child(1) {
+    display: none;
+  }
+}
 
 /* ====================================================================== */
 /* desktop sized screens */
